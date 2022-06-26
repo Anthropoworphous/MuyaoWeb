@@ -2,11 +2,12 @@
     <head>
         <link rel="icon" type="image/x-icon" href="../icon/yes.ico"/>
         <link rel="stylesheet" type="text/css" href="../css/main.css"/>
-        <title>Boxer or something</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Boxers | Box Release Countdown</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             var countDownDate = new Date("2022-07-04T13:00:00-04:00").getTime();
-            var x = setInterval(function() {
+            
+            var x = setInterval(() => {
               var now = new Date().getTime();
               var distance = countDownDate - now;
             
@@ -23,21 +24,42 @@
                 document.getElementById("timer").innerHTML = "NOW!";
               }
             }, 1000);
+            
+            $(document).ready(function(){
+                var bgW = $("#bg").width();
+                var bgH = $("#bg").height();
+                $(document).mousemove(function(e){
+                    var x = (e.clientX - (bgW / 2)) * 0.1;
+                    var y = (e.clientY - (bgH / 2)) * 0.1;
+                    $("#bg > #content").css(
+                        "transform", "translate("+x+"px,"+y+"px)"
+                    )
+                });
+            });
         </script>
     </head>
     <body>
-        <img id="bg" src="../img/bg.png"/>
+        <div id="bg">
+            <img id="content" src="../img/bg.png"/>
+        </div>
         <div id="main">
             <h3 class="text" style="font-size: 42px;">
-                Boxer Season 2
+                Boxers Season 2
             </h3>
-            <h3 class="text" style="font-size: 64px; font-weight: bold; font-family: system-ui;">
-                RELEASE IN...
-            </h1>
+            <div class="wave">
+                <h3 class="text zoom" style="font-size: 64px; font-weight: bold;">
+                    RELEASING
+                </h1>
+            </div>
             <div id="timer" class="text" style="font-size: 64px;"></div>
             <p class="text">July 26th @ 1pm EST</p>
+            <div style="margin-top: 100px">
+                <h3 class="text">Join our Discord server!</h1>
+                <a class="text" href="https://discord.gg/SDVQ22MkvV">
+                    <img src="https://img.shields.io/discord/705278191404843051?color=738aff" alt="Discord server">
+                </a>
+            </div>
         </div>
+        <img class="shake" src="../img/lmao.png" style="bottom: 5px; left: 5px; position:absolute;"/>
     </body>
-    <script>
-    </script>
 </html>
