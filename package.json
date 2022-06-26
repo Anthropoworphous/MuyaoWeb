@@ -1,0 +1,14 @@
+{
+  "name": "muyaoweb",
+  "version": "1.0.0",
+  "description": "e",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Anthropoworphous",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

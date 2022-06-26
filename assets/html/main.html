@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="../icon/yes.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+        <title>Boxer or something</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            var countDownDate = new Date("2022-07-04T13:00:00-04:00").getTime();
+            var x = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = countDownDate - now;
+            
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+            
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "NOW!";
+              }
+            }, 1000);
+        </script>
+    </head>
+    <body>
+        <img id="bg" src="../img/bg.png"/>
+        <div id="main">
+            <h3 class="text" style="font-size: 42px;">
+                Boxer Season 2
+            </h3>
+            <h3 class="text" style="font-size: 64px; font-weight: bold; font-family: system-ui;">
+                RELEASE IN...
+            </h1>
+            <div id="timer" class="text" style="font-size: 64px;"></div>
+            <p class="text">July 26th @ 1pm EST</p>
+        </div>
+    </body>
+    <script>
+    </script>
+</html>

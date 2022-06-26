@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Exo;
+    src: url('../font/exo.otf');
+}
+
+* {
+    font-family: system-ui;
+}
+
+body {
+    margin: 0px;
+    height: auto;
+    justify-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg {
+    position: absolute;
+    filter: blur(2px) brightness(50%);
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.text {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    position: fixed;
+    top: 80px;
+}
+
+#timer {
+    font-family: "Exo";
+}
